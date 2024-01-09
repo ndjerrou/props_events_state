@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import Cards from './components/Cards';
 
-function App() {
+import 'bulma/css/bulma.min.css';
+
+const App = () => {
+  const cardsInfo = [
+    {
+      title: 'John Doe',
+      username: 'jdoe',
+      desc: 'je suis un super développeur',
+    },
+    {
+      title: 'Thierry le brigand',
+      username: 'lebrigand',
+      desc: 'Grand brigand',
+    },
+    {
+      title: 'Cathy Perry',
+      username: 'cathy',
+      desc: 'Grande athlète pour les JO 2024',
+    },
+  ];
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <h1>Kikoo</h1>
+      {/* Ex */}
+      {/* // Envoyer cardsInfo dans Cards
+          // Modifier cards pour avoir 3 users distincts */}
+      <Cards name='Nissim' />
+    </>
   );
-}
+};
 
 export default App;
