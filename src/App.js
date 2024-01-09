@@ -20,13 +20,11 @@ const App = () => {
       desc: 'Grande athlète pour les JO 2024',
     },
   ];
+
   return (
     <>
       <h1>Kikoo</h1>
-      {/* Ex */}
-      {/* // Envoyer cardsInfo dans Cards
-          // Modifier cards pour avoir 3 users distincts */}
-      <Cards name='Nissim' />
+      <Cards cardsInfo={cardsInfo} />
     </>
   );
 };
