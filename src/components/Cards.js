@@ -1,57 +1,16 @@
+import Card from './Card';
+
 const Cards = ({ cardsInfo }) => {
+  console.log(cardsInfo);
   return (
     <div id='container'>
-      <div class='card'>
-        <div class='card-content'>
-          <div class='media'>
-            <div class='media-left'>
-              <figure class='image is-48x48'>
-                <img
-                  src='https://bulma.io/images/placeholders/96x96.png'
-                  alt='Placeholder image'
-                />
-              </figure>
-            </div>
-            <div class='media-content'>
-              <p class='title is-4'>{cardsInfo[1].title}</p>
-              <p class='subtitle is-6'>{cardsInfo[1].username}</p>
-            </div>
-          </div>
+      {/* <Card title='a title' username='username' desc='une desc' /> */}
 
-          <div class='content'>
-            {cardsInfo[1].desc} <a>@bulmaio</a>.<a href='#'>#css</a>{' '}
-            <a href='#'>#responsive</a>
-            <br />
-            <time datetime='2016-1-1'>11:09 PM - 1 Jan 2016</time>
-          </div>
-        </div>
-      </div>
-      <div class='card'>
-        <div class='card-content'>
-          <div class='media'>
-            <div class='media-left'>
-              <figure class='image is-48x48'>
-                <img
-                  src='https://bulma.io/images/placeholders/96x96.png'
-                  alt='Placeholder image'
-                />
-              </figure>
-            </div>
-            <div class='media-content'>
-              <p class='title is-4'>John Smith</p>
-              <p class='subtitle is-6'>@johnsmith</p>
-            </div>
-          </div>
-
-          <div class='content'>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-            nec iaculis mauris. <a>@bulmaio</a>.<a href='#'>#css</a>{' '}
-            <a href='#'>#responsive</a>
-            <br />
-            <time datetime='2016-1-1'>11:09 PM - 1 Jan 2016</time>
-          </div>
-        </div>
-      </div>
+      {cardsInfo.map(card => {
+        return (
+          <Card title={card.title} username={card.username} des={card.desc} />
+        );
+      })}
     </div>
   );
 };
